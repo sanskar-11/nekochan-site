@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Us as Cats 🐱</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cat-container {
+            text-align: center;
+        }
+
+        .cat-container img {
+            max-width: 400px;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="cat-container">
+        <img id="random-cat-image" src="" alt="Us as Cats">
+        <p class="caption">us as cats</p>
+    </div>
+
+    <script>
+        const catImages = [
+            "images/cat1.jpg",
+            "images/cat2.jpg",
+            "images/cat3.jpg",
+            "images/cat4.jpg",
+            "images/cat5.jpg",
+            "images/cat6.jpg",
+            "images/cat7.jpg",
+        ];
+
+        const randomImage = catImages[Math.floor(Math.random() * catImages.length)];
+        document.getElementById("random-cat-image").src = randomImage;
+    </script>
+</body>
+</html>
